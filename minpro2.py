@@ -70,7 +70,11 @@ def menu(role):
                         pilih = int(input("Pilih nomor yang ingin diupdate: "))
                         if 1 <= pilih <= len(target_bulanan):
                             progress_baru = int(input("Masukkan progress baru (0-100): "))
-                            
+                            if 0 <= progress_baru <= 100:
+                                target_bulanan[pilih-1]["progress"] = progress_baru
+                                print("Progress diperbarui!")
+                            else:
+                                print("Progress harus antara 0-100!")
                         else:
                             print("Nomor target tidak valid!")
                     except ValueError:
@@ -109,7 +113,7 @@ def menu(role):
                     })
                     print("Target berhasil ditambahkan!")
 
-            if pilihan == "2":
+            elif pilihan == "2":
                 if not target_bulanan:
                     print("Belum ada target untuk diupdate")
                 else:
@@ -118,10 +122,14 @@ def menu(role):
                         for i, target in enumerate(target_bulanan, start=1):
                             print(f"{i}. {target['nama']} - {target['progress']}% (Deadline: {target['deadline']})")
 
-                        pilih = int(input("Pilih nomor target yang ingin diupdate: "))
+                        pilih = int(input("Pilih nomor yang ingin diupdate: "))
                         if 1 <= pilih <= len(target_bulanan):
                             progress_baru = int(input("Masukkan progress baru (0-100): "))
-                    
+                            if 0 <= progress_baru <= 100:
+                                target_bulanan[pilih-1]["progress"] = progress_baru
+                                print("Progress diperbarui!")
+                            else:
+                                print("Progress harus antara 0-100!")
                         else:
                             print("Nomor target tidak valid!")
                     except ValueError:
@@ -136,5 +144,3 @@ def menu(role):
 role = login()
 if role:
     menu(role)
-
-
