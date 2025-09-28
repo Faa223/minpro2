@@ -66,7 +66,6 @@ def menu(role):
                     print("Belum ada target untuk diupdate")
                 else:
                     try:
-                        # Tampilkan daftar target sebelum update
                         print("=== Daftar Target ===")
                         for i, target in enumerate(target_bulanan, start=1):
                             print(f"{i}. {target['nama']} - {target['progress']}% (Deadline: {target['deadline']})")
@@ -107,7 +106,7 @@ def menu(role):
                 print("program selesai, Sampai jumpa")
                 break
             else:
-                print("Pilihan tidak valid.")
+                print("Pilihan tidak valid")
 
         elif role == "member":
             if pilihan == "1":
@@ -128,7 +127,6 @@ def menu(role):
                     print("Belum ada target untuk diupdate")
                 else:
                     try:
-                        # Tampilkan daftar target sebelum update
                         print("=== Daftar Target ===")
                         for i, target in enumerate(target_bulanan, start=1):
                             print(f"{i}. {target['nama']} - {target['progress']}% (Deadline: {target['deadline']})")
@@ -150,8 +148,9 @@ def menu(role):
                 print("Program selesai, Sampai jumpa")
                 break
             else:
-                print("Pilihan tidak valid.")
+                print("Pilihan tidak valid")
 
 role = login()
 if role:
+
     menu(role)
