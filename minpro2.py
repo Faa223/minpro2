@@ -70,6 +70,7 @@ def menu(role):
                         pilih = int(input("Pilih nomor yang ingin diupdate: "))
                         if 1 <= pilih <= len(target_bulanan):
                             progress_baru = int(input("Masukkan progress baru (0-100): "))
+                            
                         else:
                             print("Nomor target tidak valid!")
                     except ValueError:
@@ -135,3 +136,4 @@ def menu(role):
 role = login()
 if role:
     menu(role)
+
