@@ -1,9 +1,9 @@
+target_bulanan = []
+
 users = {
     "admin": {"password": "adm123", "role": "admin"},
     "member": {"password": "88yao", "role": "member"}
 }
-
-target_bulanan = []
 
 def login():
     print("=== Login Sistem Target Bulanan ===")
@@ -136,4 +136,5 @@ def menu(role):
 role = login()
 if role:
     menu(role)
+
 
