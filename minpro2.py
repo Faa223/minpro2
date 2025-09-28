@@ -70,9 +70,6 @@ def menu(role):
                         pilih = int(input("Pilih nomor yang ingin diupdate: "))
                         if 1 <= pilih <= len(target_bulanan):
                             progress_baru = int(input("Masukkan progress baru (0-100): "))
-                            if 0 <= progress_baru <= 100:
-                                target_bulanan[pilih-1]["progress"] = progress_baru
-                                print("Progress diperbarui!")
                         else:
                             print("Nomor target tidak valid!")
                     except ValueError:
@@ -123,9 +120,7 @@ def menu(role):
                         pilih = int(input("Pilih nomor target yang ingin diupdate: "))
                         if 1 <= pilih <= len(target_bulanan):
                             progress_baru = int(input("Masukkan progress baru (0-100): "))
-                            if 0 <= progress_baru <= 100:
-                                target_bulanan[pilih-1]["progress"] = progress_baru
-                                print("Progress diperbarui!")
+                    
                         else:
                             print("Nomor target tidak valid!")
                     except ValueError:
